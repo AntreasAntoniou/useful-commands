@@ -24,12 +24,20 @@ To access GitHub container registry you need to create Personal Access Token (PA
 
 “Settings > Developer Settings > Personal access tokens” and create token with permissions related to “packages” (or https://github.com/settings/tokens/new).
 
-After that, you can login export CR_PAT=YOUR_TOKEN ; echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin.
+After that, you can login 
+
+```bash
+export CR_PAT=YOUR_TOKEN ; echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+```
 
 Now, you want to tag your local images:
 
+```bash
 docker tag SOURCE_IMAGE_NAME:VERSION ghcr.io/TARGET_OWNER/TARGET_IMAGE_NAME:VERSION
+```
 
 Push re-tagged imaged to the container registry (ghcr.io):
 
+```bash
 docker push ghcr.io/OWNER/IMAGE_NAME:VERSION
+```
