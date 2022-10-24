@@ -1,0 +1,6 @@
+"runArgs": [
+    "--gpus",
+    "all"
+]
+
+https://containers.dev/implementors/json_reference/#_image-or-dockerfile-specific-properties
